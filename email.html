@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> Email validation with JavaScript</title>
+<script type="text/javascript"> 
+	function validate(){
+        var t=document.getElementById('email');
+        var x=t.value.indexOf('@');
+        var y=t.value.lastIndexOf('.');
+
+        if(x==-1 || y==-1 || (x+2)>=y){
+            alert('Email address is not valid');
+        }
+        else{
+            alert('Email is ok');
+        }
+    }
+</script>
+</head>
+<body>
+    <input type="text" name="email" id="email" />
+     <input type="button" value="Validate" onclick="validate()" />
+    
+</body>
+</html>
